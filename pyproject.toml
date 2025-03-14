@@ -1,0 +1,29 @@
+[project]
+name = "NumpyCircularBuffer"
+version = "0.1.0"
+description = "A simple interface to use a Numpy array as circular buffer."
+authors = [
+    {name = "Federico Scarpioni", email = "federicoscarpioni@gmail.com"},
+]
+maintainers = [
+    {name = "Federico Scarpioni", email = "federicoscarpioni@gmail.com"},
+]
+readme = "README.md"
+requires-python = ""
+dependencies = [
+    "numpy",
+    "attrs",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Repository = "https://github.com/federicoscarpioni/NumpyCircularBuffer"
+Issues = "https://github.com/federicoscarpioni/NumpyCircularBuffer/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
