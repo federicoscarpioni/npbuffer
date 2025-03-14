@@ -79,15 +79,3 @@ class NumpyCircularBuffer:
             return(self.maxlen - self._head) + self._tail
         else:    
             return self._tail - self._head 
-
-if __name__ == "__main__":
-    b = NumpyCircularBuffer(10)
-    b.push(np.array([1,2,3,4,5,6,7,8,9,10]))
-    print(b.get_lenght())
-    b.print_status()
-    b.push(np.array([11]))
-    b.print_status()
-    b.push(np.array([12,13,14,15,16,17]))
-    print(b.get_lenght())
-    b.print_status()
-    print(f'Buffered data: {b.get_data()}')
