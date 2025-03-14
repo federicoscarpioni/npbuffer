@@ -17,12 +17,9 @@ approach is not efficient beacuse copying is an O(N) operation but good enough f
 my projects (ex. [DEIStool](https://github.com/federicoscarpioni/DEIStools)).
 For more information on the topic of implementing circualr buffer in Python I suggest
 reading this threads:
-
-[Thread 1](https://stackoverflow.com/questions/42771110/fastest-way-to-left-cycle-a-numpy-array-like-pop-push-for-a-queue/66406793#66406793)
-
-[Thread 2](https://stackoverflow.com/questions/73342003/performant-circular-buffer-for-frames-ndarrays-of-data-samples)
-
-[Thread 3](https://stackoverflow.com/questions/8908998/ring-buffer-with-numpy-ctypes)
+[Thread 1](https://stackoverflow.com/questions/42771110/fastest-way-to-left-cycle-a-numpy-array-like-pop-push-for-a-queue/66406793#66406793),
+[Thread 2](https://stackoverflow.com/questions/73342003/performant-circular-buffer-for-frames-ndarrays-of-data-samples),
+[Thread 3](https://stackoverflow.com/questions/8908998/ring-buffer-with-numpy-ctypes).
 
 For more advanced features, already exist much more complete Python packages:
 - [Numpy Read Write Buffer](https://github.com/justengel/np_rw_buffer) : it is great
