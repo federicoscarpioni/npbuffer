@@ -11,7 +11,7 @@ The implementation follows the FIFO (first in, first out) approach and it is not
 possible to push from left, resize or any fancy remanaging. Overflow is alwasy 
 active by design as well as overwriting of data not read.
 
-This implamantation was written for data buffering from an instrument to a PC given
+This implementation was written for data buffering from an instrument to a PC given
 that data are periodically popped and copied to another location for processing. This
 approach is not efficient beacuse copying is an O(N) operation but good enough for
 my projects (ex. [DEIStool](https://github.com/federicoscarpioni/DEIStools)).
@@ -37,7 +37,7 @@ See also [Streaming Recording Buffer](https://github.com/mcorrig4/python-recordi
 
 
 ## Example of use
-'''
+```python
 b = NumpyCircularBuffer(10)
     b.push(np.array([1,2,3,4,5,6,7,8,9,10]))
     print(b.get_lenght())
@@ -48,4 +48,4 @@ b = NumpyCircularBuffer(10)
     print(b.get_lenght())
     b.print_status()
     print(f'Buffered data: {b.get_data()}')
-'''
+```
