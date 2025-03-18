@@ -3,9 +3,10 @@ A simple interface to use a Numpy array as circular buffer.
 
 This package consist of only one class object 'NumpyCircularBuffer' with the following
 methods:
-- push(), to add data to the buffer in the form of Numpy array
-- pop(), to remove data from the buffer 
-- get_data()
+- push(), to add elements to the buffer in the form of 1D Numpy array
+- pop(), to remove some of the element from the buffer 
+- get_data(), to copy the elements in the buffer without altering the head/tail positions
+- empty(), to remove all the element from the buffer
 
 The implementation follows the FIFO (first in, first out) approach with a 1D array and it is not
 possible to push from left, resize or any fancy remanaging. Overflow is alwasy 

@@ -56,7 +56,7 @@ class NumpyCircularBuffer:
     
     def get_data(self):
         '''
-        Get data from head to tail withot removing them from the buffer.
+        Get data from head to tail without removing them from the buffer.
         '''
         if self._tail <= self._head:
             return np.concatenate(
@@ -67,14 +67,32 @@ class NumpyCircularBuffer:
                 )
         else:
             return self._data[self._head:self._tail]
+
+    def empty(self):
+        '''
+        Get data from head to tail removing them from the buffer.
+        '''
+        if self._tail <= self._head:
+            head_saved = self._head
+            self._head= self._tail
+            return np.concatenate(
+                (self._data[head_saved:],
+                 self._data[:self._tail]
+                 ),
+                axis=0,
+            )
+        else:
+            head_saved = self._head
+            self._head = self._tail
+            return self._data[head_saved:self._tail]
         
     def print_status(self):
-        print(f'Maximum lenght: {self.maxlen}')
+        print(f'Maximum length: {self.maxlen}')
         print(f'Head: {self._head}')
         print(f'Tail: {self._tail}')
         print(f'Elements: {self._data}')
         
-    def get_lenght(self):
+    def get_length(self):
         if self._tail <= self._head:
             return(self.maxlen - self._head) + self._tail
         else:    
