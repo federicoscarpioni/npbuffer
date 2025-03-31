@@ -1,5 +1,5 @@
 # npbuffer
-A simple interface to use a Numpy array as circular buffer.
+A simple module for using a Numpy array as circular buffer.
 
 This package consist of only one class object 'NumpyCircularBuffer' with the following
 methods:
