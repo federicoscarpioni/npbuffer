@@ -23,7 +23,7 @@ reading this threads:
 
 For more advanced features, already exist much more complete Python packages:
 - [Numpy Read Write Buffer](https://github.com/justengel/np_rw_buffer) : it is was my favorite choice but for a short time was not supporting py>3.9 so I created my simple version of it;
-- [python-dvg-ringbuffer][https://github.com/Dennis-van-Gils/python-dvg-ringbuffer]: it looks complete but I didn't try it (but wanted to me mentioned in the list anyway);
+- [python-dvg-ringbuffer][https://github.com/Dennis-van-Gils/python-dvg-ringbuffer]: it looks complete but I didn't try it;
 - [ringbuf](https://github.com/elijahr/ringbuf?tab=readme-ov-file) : it is probably
 the most mature and optimize but require installing 'Boost' (not so easy if you
 work with corporate computers, I couldn't test it);
