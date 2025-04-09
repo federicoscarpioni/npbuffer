@@ -22,13 +22,13 @@ reading this threads:
 [Thread 3](https://stackoverflow.com/questions/8908998/ring-buffer-with-numpy-ctypes).
 
 For more advanced features, already exist much more complete Python packages:
-- [Numpy Read Write Buffer](https://github.com/justengel/np_rw_buffer) : it is great
-but doesn't support Python versions >=9.11;
+- [Numpy Read Write Buffer](https://github.com/justengel/np_rw_buffer) : it is was my favorite choice but for a short time was not supporting py>3.9 so I created my simple version of it;
+- [python-dvg-ringbuffer][https://github.com/Dennis-van-Gils/python-dvg-ringbuffer]: it looks complete but I didn't try it;
 - [ringbuf](https://github.com/elijahr/ringbuf?tab=readme-ov-file) : it is probably
 the most mature and optimize but require installing 'Boost' (not so easy if you
-work with corporate computers);
+work with corporate computers, I couldn't test it);
 - [numpy_ringbuffer](https://github.com/eric-wieser/numpy_ringbuffer) : unfortunalty 
-appends only one elemt at the time, not suitable for writing block of data (signals).
+appends only one element at the time, not suitable for writing block of data (signals).
 
 See also [Streaming Recording Buffer](https://github.com/mcorrig4/python-recording-buffer/tree/main).
 
