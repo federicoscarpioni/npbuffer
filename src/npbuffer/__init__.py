@@ -48,12 +48,13 @@ class NumpyCircularBuffer:
         if num_elements > self.get_length():
             raise Exception('Not enough elements in the buffer!')
 
-        # Handle full buffer case
         if self._head == self._tail and self._overflown:
+            # Buffer is full, handle wrap-around case
             if num_elements > self.maxlen:
                 raise Exception('Cannot pop more elements than the buffer size.')
-
-        if self._head + num_elements > self.maxlen:
+            
+        # Handle full buffer case
+        if self._head + num_elements >= self.maxlen :
             # Handle wrap-around case
             overflow = (self._head + num_elements) - self.maxlen
             current_head = self._head
@@ -62,11 +63,11 @@ class NumpyCircularBuffer:
                 self._overflown = False  # Reset overflow flag when buffer is emptied
             return np.concatenate(
                 (self._data[current_head:self.maxlen],
-                 self._data[0:overflow]),
+                self._data[0:overflow]),
                 axis=0,
             )
+        # Normal case
         else:
-            # Normal case
             current_head = self._head
             self._head = (self._head + num_elements) % self.maxlen
             if self._head == self._tail:
