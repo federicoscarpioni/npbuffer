@@ -1,5 +1,5 @@
 import numpy as np
-from NumpyCircularBuffer import NumpyCircularBuffer
+from npbuffer import NumpyCircularBuffer
 
 buffer = NumpyCircularBuffer(maxlen=10, dtype=np.int16)
 
